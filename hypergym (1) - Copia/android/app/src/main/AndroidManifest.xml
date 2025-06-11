@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.matheuscarvalho.hypergym"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false"
+        android:extractNativeLibs="false"
+        android:requestLegacyExternalStorage="false">
+
+        <activity
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:name="com.matheuscarvalho.hypergym.MainActivity"
+            android:theme="@style/AppTheme.NoActionBarLaunch"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+        
+        <!-- AdMob App ID -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"/>
+        
+        <!-- App Metadata -->
+        <meta-data android:name="com.matheuscarvalho.hypergym.DEVELOPER" android:value="Matheus Carvalho" />
+        <meta-data android:name="com.matheuscarvalho.hypergym.COPYRIGHT" android:value="© 2024 Matheus Carvalho" />
+        <meta-data android:name="com.matheuscarvalho.hypergym.VERSION" android:value="1.0.0" />
+    </application>
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    
+    <!-- AdMob Permissions -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+</manifest>

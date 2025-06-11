@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HyperGym</string>
+    <string name="title_activity_main">HyperGym</string>
+    <string name="package_name">com.matheuscarvalho.hypergym</string>
+    <string name="custom_url_scheme">com.matheuscarvalho.hypergym</string>
+    <string name="developer">Matheus Carvalho</string>
+    <string name="copyright">© 2024 Matheus Carvalho</string>
+</resources>
